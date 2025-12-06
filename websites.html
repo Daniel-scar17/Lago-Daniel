@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCGC | Una ang Ginoo | Light of the World</title>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body {
+            background: url(a4f1d473-2ac7-4290-a635-e453ccf5c402.jpeg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0px;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+        }
+        .page {
+            text-align: center;
+            cursor: pointer;
+            margin: 5px auto;
+            position: relative;
+            width: max-content;
+            font-size: 15px;
+        }
+        .page::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            height: 4px;
+            width: 100%;
+            left: 0;
+            background-color: white;
+            transition: 0.5s;
+            transition-timing-function: ease-in-out;
+            transform: scaleX(0);
+        }
+        .page:hover::after {
+            transform: scaleX(1);
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+        .navholder {
+            text-align: center;
+            margin: 5px auto;
+            margin-right: 160px;
+            font-size: 25px;
+            border: 1px solid goldenrod;
+            background-color: goldenrod;
+            width: fit-content;
+            padding: 5px 15px 10px 15px;
+            vertical-align: middle;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0px 0px 0px 2px darkgoldenrod;
+        }
+        .title {
+            border: 1px solid goldenrod;
+            background-color: goldenrod;
+            width: fit-content;
+            padding: 10px;
+            margin: 15px auto;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow:  0px 0px 0px 2px darkgoldenrod;
+        }
+        .container {
+            display: none;
+        }
+        .container.active {
+            display: block;
+        }
+        .background .content{
+            margin: 10px auto;
+            color: white;
+            width: fit-content;
+            padding: 0px 25px 0px 25px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+       .background {
+            padding: 0px 25px 0px 25px;
+        }
+       .holder {
+            padding: 0px 25px 0px 25px;
+        }
+        .bottom {
+            border: 1px solid rgb(1, 54, 1);
+            background-color: rgb(1, 54, 1);
+            text-align: center;
+            vertical-align: middle;
+            padding: 5px;
+            text-decoration: underline goldenrod;
+        }
+        .navtitle {
+            padding: 10px 70px;
+            padding-left: 80px;
+            background-color: rgb(1, 54, 1);
+            border: 1px solid rgb(1, 54, 1);
+            display: flex;
+        }
+        .image1 {
+            border-radius: 50%;
+            width: 100px;
+        }
+        .image2 {
+            border-radius: 50%;
+            width: 100px;
+        }
+        .tcgcsaying {
+            vertical-align: middle;
+            padding-top: 10px;
+            margin: 0px 40px;
+            margin-top: 20px;
+            text-decoration: underline goldenrod;
+        }
+        .nav2 {
+            margin-right: 5px;
+        }
+        .bar {
+            display: flex;
+            position: sticky;
+            top: 0;
+        }
+        button {
+            border-radius: 40px;
+            width: 80px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .pfp {
+            border-radius: 50%;
+            width: 100px;
+            margin-right: 10px ;
+        }
+        .prgh1 {
+            display: flex;
+            margin: 10px;
+        }
+        .title1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            text-decoration: underline goldenrod;
+        }
+        .imgs {
+            width: fit-content;
+            padding: 8px;
+            display: flex;
+            border-radius: 20px;
+            background-color: goldenrod;
+            margin: 5px 5px 10px 5px;
+            border: 5px solid rgb(1, 54, 1);
+        }
+        .imgss {
+            width: 180px;
+            margin: 5px;
+            border-radius: 20px;
+            border: 5px double rgb(1, 54, 1);
+        }
+        .imgss1 {
+            width: 150px;
+            margin: 5px;
+            border-radius: 20px;
+            border: 5px double rgb(1, 54, 1);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navtitle">
+        <img src="OIP (1).jpeg" alt="tcgclogo" class="image1">
+        <h1 class="tcgcsaying">Tangub City Global Collge | Una Ang Ginoo | Light Of The World</h1>
+        <img src="c75e2ec7-85c4-4b96-acd6-114b345c80b1.jpeg" alt="tcgcicslogo" class="image2">
+    </div>
+
+    <div class="holder">
+    <div class="bar">
+    <div class="navholder">
+    <nav>
+        <b>
+            | <a href="#" target="_self" class="page" onclick="showform('page5')">Community Service</a> |
+            <a href="#" target="_self" class="page" onclick="showform('page4')">Inspirational Portfolio</a> |
+            <a href="#" target="_self" class="page" onclick="showform('page3')">Faith and Technology Integration </a> |
+            <a href="#" target="_self" class="page" onclick="showform('page2')">Educational </a> |
+            <a href="#" target="_self" class="page" onclick="showform('page1')">Personal Reflection</a> |
+        </b>
+    </nav>
+    </div>
+    <div class="logout">
+            <button onclick="window.location.href='index.html'">Logout</button>
+    </div>
+    </div>
+    
+
+    <br>
+    <div class="container active" id="page1">
+    <div class="title">
+        <b>Personal Reflection</b>
+    </div>
+    <div class="background">
+        <div class="content">
+                <p class="title1"><b>Understanding Myself!</b></p>
+                <p><b>
+                    There are a lot of things I’ve reflected on in my life, and one of them is understanding myself. At first, I honestly thought that knowing who I am was something automatic like I should already understand my feelings, my actions, and my thoughts just because I live with them every day. But as I started learning more about Understanding the Self, I realized that discovering who I truly am is not something that happens instantly. It is a slow, ongoing journey that takes patience, honesty, and openness. <br><br>
+
+                    This subject taught me that the self is not fixed. I am not the same person I was last year, last month, or even last week. Every experience I go through whether it’s a small accomplishment, a big mistake, a moment of joy, or even a painful memory shapes me in ways I never expected. Sometimes I only understand the lessons much later, when I take time to reflect. I learned that even the moments I try to forget are part of what makes me who I am today. <br><br>
+
+                    Through this reflection, I also became more aware of my emotions. I used to ignore or hide what I felt, thinking that it made me strong. But I realized that true strength comes from being honest with myself. It’s okay to feel sad, confused, angry, or overwhelmed. These emotions don’t mean I am weak they mean I am human. By understanding what I feel and why I feel it, I can react more calmly, make better choices, and avoid hurting myself or others. <br><br>
+
+                    Another important thing I learned is that understanding myself helps me connect better with people. When I know my strengths, I learn how to use them in a positive way. When I accept my weaknesses, I know what I need to work on and when I need help. This makes my relationships healthier because I become more patience, more open, and more understanding. I also learned that people reflect parts of myself back to me sometimes they show me who I am, and sometimes they show me who I want to become. <br><br>
+
+                    This subject also encouraged me to think about my identity not just who I am now, but who I want to be in the future. I realized that I have the power to shape my own life. My choices, my habits, and my mindset all contribute to the kind of person I am becoming. Understanding myself helps me make decisions that align with my goals and values, instead of just doing what others expect from me. <br><br>
+
+                    Most importantly, I learned that understanding myself is not a final destination. There is no point in life where I will suddenly know everything about who I am. I will keep changing, keep learning, and keep growing and that’s okay. What matters is that I continue to explore my thoughts, listen to my feelings, reflect on my actions, and stay true to the person I want to be. <br><br>
+
+                    In the end, Understanding the Self reminded me that life is not just about achieving things, it is also about understanding the person who is achieving them. And as long as I keep learning about myself, I can continue to grow into someone wiser, kinder, and more confident. This journey is not easy, but it is one of the most important journeys I wil ever take the journey of knowing myself. <br><br>
+                </b></p>
+        </div>
+    </div>
+    </div>
+    <div class="container" id="page2">
+    <div class="title">
+        <b>Educational</b>
+    </div>
+    <div class="background">
+        <div class="content">
+                <p class="title1"><b>Lets Learn Learning!</b></p>
+                <p><b>
+                    Learning is a lifelong journey that shapes our minds, strengthens our abilities, and guides us toward a better future. It does not only happen inside classrooms—learning can come from experiences, people, challenges, and even mistakes. Every new lesson we gain becomes a part of who we are and who we can become. <br><br>
+
+                    Why Learning Matters <br>
+                    1. Builds Knowledge and Skills <br>
+                    Learning allows us to gather information and develop skills that we can use in our daily lives. From reading and writing to solving problems and understanding how things work, knowledge gives us the power to navigate the world better. <br>
+                    2. Strengthens Critical Thinking <br>
+                    Through learning, we learn to analyze situations, compare ideas, and make reasonable decisions. Critical thinking helps us avoid confusion, solve challenges, and understand different viewpoints. <br>
+                    3. Expands Opportunities <br>
+                    Education opens doors. The more we learn and the more skills we develop, the more opportunities we can access—whether it’s in school projects, future careers, or personal achievements. <br>
+                    4. Increases Confidence <br>
+                    When we understand something, we feel more secure and brave enough to try new things. Confidence grows as we learn more, helping us face challenges with a positive mindset. <br>
+                    5. Helps Us Adapt to Change <br>
+                    The world changes quickly. New technologies, new ideas, and new ways of doing things appear all the time. Learning keeps us updated and prepared for whatever comes next. <br>
+                    6. Builds Character and Discipline <br>
+                    Learning teaches us patience, responsibility, and perseverance. It shows us the value of hard work and the importance of never giving up. <br>
+                    7. Encourages Creativity <br>
+                    With more knowledge, we can create better ideas, solve problems creatively, and think outside the box. Learning fuels imagination. <br><br>
+                    Ways to Learn Effectively <br>
+                    1. Ask Questions <br>
+                    Questions help deepen understanding. When we ask, we discover new details and clarify confusing ideas. <br>
+                    2. Practice What You Learn <br>
+                    Practicing helps strengthen memory and improves skills over time. The more we apply what we learn, the better we become. <br>
+                    3. Stay Curious <br>
+                    Curiosity keeps the brain active and excited. When we stay curious, learning becomes enjoyable rather than tiring. <br>
+                    4. Use Different Learning Methods <br>
+                    People learn in different ways. You can read, watch videos, take notes, do hands-on activities, or discuss with others. <br>
+                    5. Take Breaks and Rest <br>
+                    Rest helps the brain recharge. Breaks prevent stress and help you learn more effectively. <br>
+                    6. Set Goals <br>
+                    Having clear goals helps us stay focused. Whether it’s finishing a topic or improving a skill, goals give direction to our learning. <br><br>
+
+                    Real-Life Examples of Learning <br>
+                    Learning to cook teaches measurement, patience, and responsibility. <br>
+                    Playing sports teaches teamwork, discipline, and strategy. <br>
+                    Helping at home teaches responsibility and problem-solving. <br>
+                    Talking with others teaches communication and empathy. <br>
+                    Exploring new hobbies teaches creativity and perseverance. <br>
+                    Learning is everywhere it happens beyond books and classrooms. <br><br>
+
+                    In conclusion, learning is not just something we do for school it is something that guides us throughout life. It shapes our mind, builds our character, and gives us the tools to succeed. When we embrace learning, we open ourselves to endless possibilities. With dedication, curiosity, and an open mind, anyone can learn, grow, and achieve great things.
+                </b></p>
+        </div>
+    </div>
+    </div>
+    <div class="container" id="page3">
+    <div class="title">
+        <b>Faith and Technology Integration</b>
+    </div>
+    <div class="background">
+        <div class="content">
+                <p class="title1"><b>Faith With Computer Skills!</b></p>
+                <p><b>
+                    Taking the Computer Science major becomes even more meaningful when it connects with faith and
+                    technology integration. This means learning how to use technology in ways that reflect good
+                    values and positive intentions. As students study coding and building programs, they also
+                    learn to use their skills to help others and spread positivity. Technology can support
+                    faith by making prayer, learning, and connection easier through apps and online platforms. 
+                    By combining faith with computer skills, students learn to make responsible and thoughtful 
+                    choices in the digital world. They can create tools that encourage kindness, honesty, and 
+                    respect. This makes Computer Science not just about building systems, but also about using
+                    technology for a good purpose. Overall, it helps students grow both in skill and character 
+                    as they prepare for their future.
+                </b></p>
+        </div>
+    </div>
+    </div>
+    </picture>
+    <div class="container" id="page4">
+    <div class="title">
+        <b>Inspirational Portfolio</b>
+    </div>
+    <div class="background">
+        <div class="content">
+            <p class="title1"><b>About Me!</b></p>
+            <div class="prgh1">
+                <img class="pfp" src="509499913_1748664942684010_8963209141201536687_n.jpg" alt="picture">
+                <p><b>
+                    Hello there! My name is Daniel A. Lago, I'm a Computer Science major and this website is my work.
+                    This website contains all the experiences, achievements, and how I live my live as a person.
+                    Being yourself is not just to do things for your own good but also for those around you, caring ,
+                    respecful, and kind for those around you is what truly makes you a person and so I hope you find
+                    who you truly are as a person. I hope this motivate you a little to live as yourself and do lots
+                    of fun stuff and lastly care for those around you.
+                </b></p>
+            </div>
+            <div class="prgh2">
+                <p><b>
+                    The pictures that you see is all about my present, my past, my future, and the achievements that
+                    that happened in my life. The first and the last image is what I see in my future, one of my goals
+                    is to make a game thats why I pick Computer Science as my major. The second and third and fourth is 
+                    all about my family that help me become who I am today, my friends when I was high school who made 
+                    my life fun, and the friends that I made in college made my college life fun and exciting. And the 
+                    fifth image is my pride and the most I'm proud of and one of the greatest achievement in my life.
+                </b></p>
+            </div>
+            <div class="imgs">
+                <img class="imgss" src="OIP.jpeg" alt="picture">
+                <img class="imgss" src="2096c9eb-1447-4678-b1f6-e15ecdbae160.jpeg" alt="picture">
+                <img class="imgss" src="e93d6628-31f8-4ec8-af60-c36ad2acaa8a.jpeg" alt="picture">
+                <img class="imgss" src="71c235ff-3e76-4568-b62c-4fc64e5050ff.jpeg" alt="picture">
+                <img class="imgss" src="9d0cde75-6792-4d36-87cc-d302abe2d6f6.jpeg" alt="picture">
+                <img class="imgss" src="OIP (2).jpeg" alt="picture">
+            </div> 
+    </div>
+    </div>
+    </div>
+     <div class="container"  id="page5">
+    <div class="title">
+        <b>Community Service</b>
+    </div>
+    <div class="background">
+        <div class="content">
+            <p class="title1"><b>Taking Out Trash! & Blood Donation!</b></p>
+                <p><b>
+                    The Tangub City Global College ROTC is helping the people and the community of Tangub City be free from garbage.
+                    It has been a lot of help for the people and the cummunity, and the beauty of Tangub City shines again. <br><br>
+
+                    The Tangub City Global College ROTC has donated blood for those who need it. Helping those who need blood is one 
+                    of the mission that the TCGC ROTC aim, and will continue to help in the future people for those who need it.
+                </b></p>
+                <div class="imgs">
+                    <img src="3896e08e-345e-4a22-9ebf-b389ce5ca8ef.jpeg" alt="picture" class="imgss1">
+                    <img src="476798592_122267232584002416_7863687551309313394_n.jpg" alt="picture" class="imgss1">
+                    <img src="74ae7e26-44e4-4831-951b-d82afb0459cc.jpeg" alt="picture" class="imgss1">
+                    <img src="2c177d88-e38a-4113-87aa-6676da5539c7.jpeg" alt="picture" class="imgss1">
+                    <img src="534168903_122306126912002416_269437980647719897_n.jpg" alt="picture" class="imgss1">
+                    <img src="d59c5124-3714-4b28-ab25-7e216ff019ae.jpeg" alt="picture" class="imgss1">
+                    <img src="f0b9f2c6-658c-4eed-b873-072401e8ce4c.jpeg" alt="picture" class="imgss1">
+                </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="bottom">
+        <b>| Credits @Daniel Lago | @TCGC | @ICS |</b>
+    </div>
+
+<script>
+    function showform(formId) {
+    document.querySelectorAll(".container").forEach(form => form.classList.remove("active"));
+    document.getElementById(formId).classList.add("active");
+    }   
+</script>
+</body>
+</html>

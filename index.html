@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Register | TCGC | Una ang Ginoo | Light of the World</title>
+    <link href='https://cdn.boxicons.com/3.0.5/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0px 20px 0px 20px;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(a4f1d473-2ac7-4290-a635-e453ccf5c402.jpeg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .form-box {
+            width: 420px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 20px;
+            padding: 30px 40px;
+            display: none;
+        }
+        .form-box.active {
+            display: block;
+        }
+        .form-box h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+        .form-box .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 40px;
+            font-size: 16px;
+            color: white;
+            padding: 20px 45px 20px 20px;
+        }
+        .input-box input::placeholder {
+            color: white;
+        }
+        select {
+            width: 85%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 40px;
+            font-size: 16px;
+            color: white;
+            padding: 14px 0px;
+            margin: 0px 15px 15px 25px;
+        }
+        option {
+            background-color: black;
+        }
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+        .form-box .btn {
+            width: 100%;
+            height: 45px;
+            background: white;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px black;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+        }
+        .form-box .register-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin: 20px 0 15px;
+        }
+        .register-link p a {
+            color: blue;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0;
+        }
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+        header {
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+           
+        }
+        .title1 {
+            color: gainsboro;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: underline goldenrod;
+        }
+        .title2 {
+            font-size: 40px;
+            color: rgb(224, 162, 3);
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: underline gainsboro;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="title1">Tangub City Global College</h1>
+        <h1 class="title2">Una Ang Ginoo | Light of the World</h1>
+    </header>
+    
+    <div class="container">
+        <div class="form-box active" id="login-form">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Press login to enter, still" required>
+                    <i class='bx  bx-user'></i> 
+                </div>
+                <div class="input-box">
+                    <input type="text" name="password" placeholder="learing to make it work" required>
+                    <i class='bx  bx-lock'></i> 
+                </div>
+
+                <button type="submit" class="btn" onclick="window.location.href='websites.html'">Login</button>
+            </form>
+
+            <div class="register-link">
+                <p>Don't have an account? 
+                <a href="#" onclick="showform('register-form')">Register</a></p>
+            </div>
+        </div>
+
+        <div class="form-box" id="register-form">
+            <form action="">
+                <h1>Register</h1>
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Press register, still learning" required>
+                    <i class='bx  bx-user'></i> 
+                </div>
+                <div class="input-box">
+                    <input type="text" name="email" placeholder="to make a proper working" required>
+                    <i class='bx  bx-envelope-alt'></i> 
+                </div>
+                <div class="input-box">
+                    <input type="text" name="password" placeholder="login & register form page" required>
+                    <i class='bx  bx-lock'></i> 
+                </div>    
+
+                <button onclick="window,location.href='index.html'" type="submit" class="btn">Register</button>
+            </form>
+
+            <div class="register-link">
+                <p>Already have an account? 
+                <a href="#" onclick="showform('login-form')">Login</a></p>
+            </div>
+        </div>
+    </div>
+    
+<script>
+    function showform(formId) {
+    document.querySelectorAll(".form-box").forEach(form => form.classList.remove("active"));
+    document.getElementById(formId).classList.add("active");
+    }
+</script>
+</body>
+</html>
