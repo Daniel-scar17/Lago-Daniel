@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login_Register | TCGC | Una ang Ginoo | Light of the World</title>
     <link href='https://cdn.boxicons.com/3.0.5/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="demo.css">
     <style>
         * {
             margin: 0;
@@ -22,12 +23,13 @@
             background-position: center;
         }
         .form-box {
-            width: 420px;
+            width: fit-content;
             background: rgba(255, 255, 255, 0.2);
             color: white;
             border-radius: 20px;
             padding: 30px 40px;
             display: none;
+            margin: 0px 3px;
         }
         .form-box.active {
             display: block;
@@ -136,18 +138,18 @@
     
     <div class="container">
         <div class="form-box active" id="login-form">
-            <form action="">
+            <form onsubmit="return btn()">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="text" name="name" placeholder="Press login to enter, still" required>
+                    <input type="text" id="username" name="name" placeholder="Username" required>
                     <i class='bx  bx-user'></i> 
                 </div>
                 <div class="input-box">
-                    <input type="text" name="password" placeholder="learing to make it work" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
                     <i class='bx  bx-lock'></i> 
                 </div>
 
-                <button type="submit" class="btn" onclick="window.location.href='websites.html'">Login</button>
+                <button type="submit" class="btn">Login</button>
             </form>
 
             <div class="register-link">
@@ -157,22 +159,22 @@
         </div>
 
         <div class="form-box" id="register-form">
-            <form action="">
+            <form>
                 <h1>Register</h1>
                 <div class="input-box">
-                    <input type="text" name="name" placeholder="Press register, still learning" required>
+                    <input type="text" id="username" name="name" placeholder="Username" required>
                     <i class='bx  bx-user'></i> 
                 </div>
                 <div class="input-box">
-                    <input type="text" name="email" placeholder="to make a proper working" required>
+                    <input type="text" id="email" name="email" placeholder="Email" required>
                     <i class='bx  bx-envelope-alt'></i> 
                 </div>
                 <div class="input-box">
-                    <input type="text" name="password" placeholder="login & register form page" required>
+                    <input type="text" id="password" name="password" placeholder="Password" required>
                     <i class='bx  bx-lock'></i> 
                 </div>    
 
-                <button onclick="window,location.href='index.html'" type="submit" class="btn">Register</button>
+                <button type="submit" onclick="window.location.href='index.html'" class="btn">Register</button>
             </form>
 
             <div class="register-link">
@@ -186,6 +188,23 @@
     function showform(formId) {
     document.querySelectorAll(".form-box").forEach(form => form.classList.remove("active"));
     document.getElementById(formId).classList.add("active");
+    }
+
+    function btn(){
+
+            let pass= document.getElementById("password").value;
+            let user= document.getElementById("username").value;
+
+            let correctPass= "admin";
+            let correctUser="admin";
+
+            if(pass === correctPass && user === correctUser){
+                window.location.href="websites.html";
+                return false;
+            } else {
+                alert("Invalid username or password");
+                return false;
+        }
     }
 </script>
 </body>
